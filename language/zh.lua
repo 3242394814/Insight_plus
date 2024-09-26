@@ -30,6 +30,6 @@ GLOBAL.STRINGS.Compat_Insight = {
     },
     ROCMANAGER = {
         PAUSED = "(已暂停)",
-        ROC_ATTACK = "<prefab=ROC_HEAD>会在%s后攻击。",
+        ROC_ATTACK = "<prefab=ROC_HEAD>会在%s后到来。",
     },
 }

@@ -4,13 +4,16 @@ Adapted for Above the Clouds
 ]]
 
 -- rocmanager.lua [Worldly]
-local ROC_TIMER_NAME = "ROC_RESPAWN_TIMER"
-local IsPaused = TheWorld.components.worldsettingstimer:IsPaused(ROC_TIMER_NAME)
-
 local function Describe(self, context)
 	local description
-	local remaining_time = TheWorld.components.worldsettingstimer:GetTimeLeft(ROC_TIMER_NAME) or -1
-	local warning = remaining_time<=30 and true or false
+	local str = self:GetDebugString()
+	local remaining_time = string.match(str,"Spawns In: ([%d%.%-]+)")
+	local IsPaused = string.match(str, "%(Paused%)")
+
+	if not remaining_time then return end
+
+	remaining_time = tonumber(remaining_time)
+	local warning = remaining_time <= 30 and true or false
 
 	description = context.time:SimpleProcess(remaining_time)
 
