@@ -1,4 +1,5 @@
 GLOBAL.STRINGS.Compat_Insight = {
+    -- 岛屿冒险-海难
     VOLCANOMANAGER = {
         DESCRIPTION = "%s\n[下一次地震: %s后]",
         ANNOUNCE_COOLDOWN = "火山将于%s后爆发。",
@@ -11,7 +12,11 @@ GLOBAL.STRINGS.Compat_Insight = {
         ANNOUNCE_TIMER = "<prefab=KNIGHTBOAT>会重生于%s后。",
         ANNOUNCE_READY = "<prefab=KNIGHTBOAT>: %s。",
     },
+    KRAKENER = {
+        ANNOUNCE_TIMER = "<prefab=KRAKEN>会重生于%s后。",
+    },
 
+    -- 云霄国度
     BATTED = {
         DESCRIPTION = "%s\n[数量: %s，恢复时间: %s]",
         NEXT_ATTACK = "<prefab=VAMPIREBAT>会在%s后攻击。",

@@ -20,14 +20,14 @@ local function zh_en(zh, en)  -- Other languages don't work
     return lang == "zh" and zh or en
 end
 
-name = zh_en("Insight BOSS倒计时功能加强","Enhanced countdown feature for Insight")
+name = zh_en("Insight 事件倒计时功能加强","Enhanced countdown feature for Insight")
 author = "冰冰羊"
 description = [[
 
-为Insight支持岛屿冒险模组中的：虎鲨、火山、浮船骑士 的倒计时宣告
+为Insight支持岛屿冒险模组中的：虎鲨、火山、浮船骑士、海妖 的倒计时宣告
 为Above the Clouds模组添加蝙蝠、不老泉、蒙面猪人、友善的大鹏、大灾变、大灾变期间的蝙蝠/远古先驱 倒计时显示，同时支持宣告
 ]]
-version = "1.4.1"
+version = "1.4.2"
 dst_compatible = true
 forge_compatible = false
 gorge_compatible = false

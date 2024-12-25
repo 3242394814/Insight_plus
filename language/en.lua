@@ -1,5 +1,6 @@
 -- My translation may not be very good. If you have a better translation, please feel free to submit it to me at any time
 GLOBAL.STRINGS.Compat_Insight = {
+    -- Island Adventure - Shipwrecked
     VOLCANOMANAGER = {
         DESCRIPTION = "%s\n[Next quake in: %s]",
         ANNOUNCE_COOLDOWN = "The volcano will erupt in %s.",
@@ -12,7 +13,11 @@ GLOBAL.STRINGS.Compat_Insight = {
         ANNOUNCE_TIMER = "<prefab=KNIGHTBOAT> will respawn in %s.",
         ANNOUNCE_READY = "<prefab=KNIGHTBOAT>: %s.",
     },
+    KRAKENER = {
+        ANNOUNCE_TIMER = "<prefab=KRAKEN> will respawn in %s.",
+    },
 
+    -- Above the Clouds
     BATTED = {
         DESCRIPTION = "%s\n[count：%s , Regen In：%s]",
         NEXT_ATTACK = "<prefab=VAMPIREBAT> will attack in %s.",

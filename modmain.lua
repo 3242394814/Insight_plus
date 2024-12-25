@@ -1,5 +1,10 @@
+GLOBAL.setmetatable(env, {
+    __index = function(t, k)
+        return GLOBAL.rawget(GLOBAL, k)
+    end
+})
+
 _G = GLOBAL
-ToolUtil = {}
 
 Assets = {
     Asset("ATLAS", "images/lifeplant.xml"), -- 不老泉
@@ -8,40 +13,6 @@ Assets = {
     Asset("ATLAS", "images/pig_bandit.xml"), -- 蒙面猪人
     Asset("IMAGE", "images/pig_bandit.tex"),
 }
-
-local function get_upvalue(fn, name)
-    local i = 1
-    while true do
-        local value_name, value = debug.getupvalue(fn, i)
-        if value_name == name then
-            return value, i
-        elseif value_name == nil then
-            return
-        end
-        i = i + 1
-    end
-end
-
--- ---@param fn function
--- ---@param path string
--- ---@return any, number, function
--- function ToolUtil.GetUpvalue(fn, path)
---     local value, prv, i = fn, nil, nil ---@type any, function | nil, number | nil
---     for part in path:gmatch("[^%.]+") do
---         -- print(part)
---         prv = fn
---         value, i = get_upvalue(value, part)
---     end
---     return value, i, prv
--- end
-
--- ---@param fn function
--- ---@param path string
--- ---@param value any
--- function ToolUtil.SetUpvalue(fn, value, path)
---     local _, i, source_fn = ToolUtil.GetUpvalue(fn, path)
---     debug.setupvalue(source_fn, i, value)
--- end
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -76,17 +47,18 @@ else
     lang = "en"
 end
 
--- TUNING.COMPAT_INSIGHT_LANGUAGE = lang -- 方便获取本MOD的语言设置
 modimport("language/"..lang..".lua")
 
 local function AddDescriptors()
     if not _G.rawget(_G, "Insight") then return end
+    -- 原版
+        _G.Insight.descriptors.flotsamgenerator = _G.require("descriptors/flotsamgenerator") -- Player页面 下一个瓶中信刷新倒计时
 
     -- 岛屿冒险-海难
         _G.Insight.descriptors.volcanomanager = _G.require("descriptors/islandadventures_volcanomanager") -- 火山爆发倒计时
         _G.Insight.descriptors.tigersharker = _G.require("descriptors/islandadventures_tigersharker") -- 虎鲨倒计时支持宣告
         _G.Insight.descriptors.chessnavy = _G.require("descriptors/islandadventures_chessnavy") -- 浮船骑士倒计时支持宣告
-
+        _G.Insight.descriptors.krakener = _G.require("descriptors/islandadventures_krakener") -- 海妖倒计时支持宣告
 
     -- if Ismodloaded("workshop-3322803908") then -- 猪镇 by.亚丹
         _G.Insight.descriptors.aporkalypse = _G.require("descriptors/porkland_aporkalypse") -- 大灾变倒计时
