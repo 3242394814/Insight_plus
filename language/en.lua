@@ -4,10 +4,6 @@ GLOBAL.STRINGS.Compat_Insight = {
     VOLCANOMANAGER = {
         DESCRIPTION = "%s\n[Next quake in: %s]",
         ANNOUNCE_COOLDOWN = "The volcano will erupt in %s.",
-        QUAKE_INFO = "Firerain: %d, Delay: %d, Duration: %d, Interval: %d\nAsh: %d, Delay: %d, Duration: %d\nSmoke: %d, Delay: %d, Duration: %d",
-        ANNOUNCE_QUAKE = "Time remaining until the end of the firerain: %s",
-        ANNOUNCE_SMOKETIME = "Volcano eruption smoke remaining time: %s",
-        ANNOUNCE_ASHTIME = "Volcanic ash effect remaining time: %s"
     },
     CHESSNAVY = {
         ANNOUNCE_TIMER = "<prefab=KNIGHTBOAT> will respawn in %s.",

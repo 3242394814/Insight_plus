@@ -51,9 +51,6 @@ modimport("language/"..lang..".lua")
 
 local function AddDescriptors()
     if not _G.rawget(_G, "Insight") then return end
-    -- 原版
-        _G.Insight.descriptors.flotsamgenerator = _G.require("descriptors/flotsamgenerator") -- Player页面 下一个瓶中信刷新倒计时
-
     -- 岛屿冒险-海难
         _G.Insight.descriptors.volcanomanager = _G.require("descriptors/islandadventures_volcanomanager") -- 火山爆发倒计时
         _G.Insight.descriptors.tigersharker = _G.require("descriptors/islandadventures_tigersharker") -- 虎鲨倒计时支持宣告

@@ -3,10 +3,6 @@ GLOBAL.STRINGS.Compat_Insight = {
     VOLCANOMANAGER = {
         DESCRIPTION = "%s\n[下一次地震: %s后]",
         ANNOUNCE_COOLDOWN = "火山将于%s后爆发。",
-        QUAKE_INFO = "火雨剩余时间: %d, 延迟时间: %d, 持续时间: %d, 间隔: %d\n灰烬剩余时间: %d, 延迟时间: %d, 持续时间: %d\n烟雾剩余时间: %d, 延迟时间: %d, 持续时间: %d",
-        ANNOUNCE_QUAKE = "火山爆发剩余时间: %s",
-        ANNOUNCE_SMOKETIME = "火山爆发烟雾剩余时间: %s",
-        ANNOUNCE_ASHTIME = "火山灰特效剩余时间: %s"
     },
     CHESSNAVY = {
         ANNOUNCE_TIMER = "<prefab=KNIGHTBOAT>会重生于%s后。",
