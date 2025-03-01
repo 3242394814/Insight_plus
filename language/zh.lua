@@ -4,6 +4,13 @@ GLOBAL.STRINGS.Compat_Insight = {
         DESCRIPTION = "%s\n[下一次地震: %s后]",
         ANNOUNCE_COOLDOWN = "火山将于%s后爆发。",
     },
+    VOLCANOACTIVITY = {
+        EROPTION = "火山爆发剩余时间: %s,\n",
+        NO_EROPTION = "火山爆发: 无\n",
+        ANNOUNCE_EROPTION = "火山爆发剩余时间: %s",
+        MINOR_EROPTION = "小规模喷发 (%d): 陨石数量 %d\n",
+        NO_MINOR_EROPTION = "小规模喷发: 无",
+    },
     CHESSNAVY = {
         ANNOUNCE_TIMER = "<prefab=KNIGHTBOAT>会重生于%s后。",
         ANNOUNCE_READY = "<prefab=KNIGHTBOAT>: %s。",

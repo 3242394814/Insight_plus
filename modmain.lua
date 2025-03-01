@@ -36,9 +36,7 @@ local chinese_languages =
 
 -- 检测某个模组是否加载
 local function Ismodloaded(name)
-    if _G.KnownModIndex:IsModEnabledAny(name) then
-        return true
-    end
+    return _G.KnownModIndex:IsModEnabledAny(name)
 end
 
 if chinese_languages[lang] ~= nil then
@@ -51,13 +49,14 @@ modimport("language/"..lang..".lua")
 
 local function AddDescriptors()
     if not _G.rawget(_G, "Insight") then return end
-    -- 岛屿冒险-海难
+    -- 岛屿冒险 - 海难
+        _G.Insight.descriptors.volcanoactivity = _G.require("descriptors/islandadventures_volcanoactivity") -- 火山活动倒计时
         _G.Insight.descriptors.volcanomanager = _G.require("descriptors/islandadventures_volcanomanager") -- 火山爆发倒计时
         _G.Insight.descriptors.tigersharker = _G.require("descriptors/islandadventures_tigersharker") -- 虎鲨倒计时支持宣告
         _G.Insight.descriptors.chessnavy = _G.require("descriptors/islandadventures_chessnavy") -- 浮船骑士倒计时支持宣告
         _G.Insight.descriptors.krakener = _G.require("descriptors/islandadventures_krakener") -- 海妖倒计时支持宣告
 
-    -- if Ismodloaded("workshop-3322803908") then -- 猪镇 by.亚丹
+    -- if Ismodloaded("workshop-3322803908") then -- 云霄国度
         _G.Insight.descriptors.aporkalypse = _G.require("descriptors/porkland_aporkalypse") -- 大灾变倒计时
         _G.Insight.descriptors.batted = _G.require("descriptors/porkland_batted") -- 蝙蝠袭击倒计时
         _G.Insight.descriptors.banditmanager = _G.require("descriptors/porkland_banditmanager") -- 蒙面猪人倒计时

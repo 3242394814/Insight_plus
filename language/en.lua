@@ -5,6 +5,13 @@ GLOBAL.STRINGS.Compat_Insight = {
         DESCRIPTION = "%s\n[Next quake in: %s]",
         ANNOUNCE_COOLDOWN = "The volcano will erupt in %s.",
     },
+    VOLCANOACTIVITY = {
+        EROPTION = "Volcanic eruption remaining time: %s,\n",
+        NO_EROPTION = "Volcanic eruption: None\n",
+        ANNOUNCE_EROPTION = "Volcanic eruption remaining time: %s",
+        MINOR_EROPTION = "Minor eruption (%d): Firerain count %d\n",
+        NO_MINOR_EROPTION = "Minor eruption: None",
+    },
     CHESSNAVY = {
         ANNOUNCE_TIMER = "<prefab=KNIGHTBOAT> will respawn in %s.",
         ANNOUNCE_READY = "<prefab=KNIGHTBOAT>: %s.",
