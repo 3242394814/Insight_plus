@@ -48,16 +48,16 @@ local function StatusAnnouncementsDescribe(special_data, context)
     status = special_data.status
 
 	if status.active_bandit == "true" then
-		description = string.format(
+		description = Insight.env.ProcessRichTextPlainly(string.format(
 			STRINGS.Compat_Insight.BANDITMANAGER.ANNOUNCE_READY,
 			status.stolen_oincs
-		)
+		))
 	else
-		description = string.format(
+		description = Insight.env.ProcessRichTextPlainly(string.format(
 			STRINGS.Compat_Insight.BANDITMANAGER.ANNOUNCE_COOLDOWN,
 			status.respawns_in,
 			status.stolen_oincs
-		)
+		))
 	end
 
     return {

@@ -27,14 +27,15 @@ GLOBAL.STRINGS.Compat_Insight = {
     APORKALYPSE = {
         NEXT_TIME = "大灾变将在%s后到来。",
         ATTACK = "\n下一次蝙蝠袭击: %s后\n下一次远古先驱袭击: %s后",
+        ANNOUNCE = "下一次蝙蝠袭击: %s后    下一次远古先驱袭击: %s后",
     },
     PUGALISK_FOUNTAIN = {
         WATERDROP_REGEN = "<prefab=WATERDROP>会再生于%s后。",
     },
     BANDITMANAGER = {
-        DESCRIPTION = "下一次判定: %s后\n[被盗的呼噜币数量: %s，当前盗贼出没: %s]",
-        ANNOUNCE_COOLDOWN = "蒙面猪人的下一次判定时间为: %s后。当前已盗走%s个呼噜币。",
-        ANNOUNCE_READY = "蒙面猪人已刷新。当前盗走的呼噜币数量: %s"
+        DESCRIPTION = "尝试刷新于: %s后\n[被盗的呼噜币数量: %s，当前盗贼出没: %s]",
+        ANNOUNCE_COOLDOWN = "<prefab=PIGBANDIT>将于: %s后尝试刷新。当前已盗走%s个呼噜币。",
+        ANNOUNCE_READY = "<prefab=PIGBANDIT>已刷新。当前盗走的呼噜币数量: %s"
     },
     ROCMANAGER = {
         PAUSED = "(已暂停)",

@@ -27,7 +27,7 @@ description = [[
 为云霄国度模组添加
 蝙蝠、不老泉、蒙面猪人、友善的大鹏、大灾变、大灾变期间的蝙蝠/远古先驱 倒计时显示，同时支持宣告
 ]]
-version = "1.4.4"
+version = "1.4.5"
 dst_compatible = true
 forge_compatible = false
 gorge_compatible = false

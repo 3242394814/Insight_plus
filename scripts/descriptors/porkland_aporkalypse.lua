@@ -35,7 +35,12 @@ local function Describe(self, context)
 			next_bat_attack,
 			next_herald_attack
 		)
-		status_string = description
+
+		status_string = string.format(
+			STRINGS.Compat_Insight.APORKALYPSE.ANNOUNCE,
+			next_bat_attack,
+			next_herald_attack
+		)
 	end
 
 

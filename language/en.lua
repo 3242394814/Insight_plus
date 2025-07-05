@@ -28,14 +28,15 @@ GLOBAL.STRINGS.Compat_Insight = {
     APORKALYPSE = {
         NEXT_TIME = "The Aporkalypse will arrive in %s.",
         ATTACK = "\nNext bat attack: %s\nNext herald attack: %s",
+        ANNOUNCE = "Next bat attack: %s    Next herald attack: %s",
     },
     PUGALISK_FOUNTAIN = {
         WATERDROP_REGEN = "<prefab=WATERDROP> will regenerate in %s.",
     },
     BANDITMANAGER = {
-        DESCRIPTION = "Next assessment in: %s\n[Stolen Oincs: %s , Active Bandit: %s]",
-        ANNOUNCE_COOLDOWN = "The next assessment by the Masked Pig will be in %s. Currently stolen Oincs: %s",
-        ANNOUNCE_READY = "The Masked Pig has respawned. Current stolen Oincs: %s"
+        DESCRIPTION = "Trying to spawn: %s\n[Stolen Oincs: %s , Active Bandit: %s]",
+        ANNOUNCE_COOLDOWN = "<prefab=PIGBANDIT> Will attempt to respawn in: %s Currently stolen Oincs: %s",
+        ANNOUNCE_READY = "<prefab=PIGBANDIT> has respawned. Current stolen Oincs: %s"
     },
     ROCMANAGER = {
         PAUSED = "(Paused)",
