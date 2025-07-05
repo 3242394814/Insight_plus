@@ -22,11 +22,18 @@ end
 
 name = zh_en("Insight 事件倒计时功能加强","Enhanced countdown feature for Insight")
 author = "冰冰羊"
-description = [[
-为Insight支持岛屿冒险 - 海难模组中的：虎鲨、火山、浮船骑士、海妖 的倒计时宣告
-为云霄国度模组添加
-蝙蝠、不老泉、蒙面猪人、友善的大鹏、大灾变、大灾变期间的蝙蝠/远古先驱 倒计时显示，同时支持宣告
-]]
+description = zh_en([[
+加强Insight的事件倒计时功能！
+
+为Insight支持岛屿冒险模组中的：虎鲨、火山、浮船骑士、海妖 的倒计时宣告
+为云霄国度(猪镇联机)模组添加蝙蝠、不老泉、蒙面猪人、友善的大鹏、大灾变、大灾变期间的蝙蝠/远古先驱 倒计时显示，同时支持宣告
+]], [[
+Enhances Insight's event countdown feature!
+
+Adds support for Island Adventures with countdown announcements for: Tiger Shark, Volcano, Floaty Boaty Knight, Quacken.
+Also adds support for Above the Clouds with countdowns and announcements for: Vampire Bat, Fountain of Youth, Masked Pig, BFB, Aporkalypse, and bats/Ancient Herald during the Aporkalypse.
+]])
+
 version = "1.4.5"
 dst_compatible = true
 forge_compatible = false
