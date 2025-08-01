@@ -34,7 +34,7 @@ Adds support for Island Adventures with countdown announcements for: Tiger Shark
 Also adds support for Above the Clouds with countdowns and announcements for: Vampire Bat, Fountain of Youth, Masked Pig, BFB, Aporkalypse, and bats/Ancient Herald during the Aporkalypse.
 ]])
 
-version = "1.4.5"
+version = "1.4.6"
 dst_compatible = true
 forge_compatible = false
 gorge_compatible = false
@@ -46,7 +46,7 @@ all_clients_require_mod = true
 --icon = "modicon.tex"
 forumthread = ""
 api_version_dst = 10
-priority = -100001
+priority = -10001
 server_filter_tags = {
     "Insight BOSS倒计时功能加强 v"..version,
     "Enhanced countdown feature for Insight v"..version

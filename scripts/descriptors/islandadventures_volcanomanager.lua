@@ -4,25 +4,27 @@ Adapted for Island Adventures - Shipwrecked.
 ]]
 
 -- volcanomanager.lua [Worldly]
-local clock = Insight.env.import("helpers/clock")
 local function Describe(self, context)
 	-- SW only
 	local description = nil
 	local time_string = nil
 	local warning = nil
 
-	local time_left_in_segment = clock:GetTimeLeftInSegment()
-	if not time_left_in_segment then
+	if not ( self:GetNumSegmentsUntilEruption() and self:GetNumSegmentsUntilQuake() ) then
 		return
 	end
 
-	if not self:GetNumSegmentsUntilEruption() then
-		return
-	end
+	local ActualTime = (TUNING.TOTAL_DAY_TIME * (TheWorld.state.time * 100)) / 100
+	local ActualSeg = math.floor(ActualTime / 30)
+	local TimeInSeg = ActualTime - (ActualSeg * 30)
 
-	local seconds = (self:GetNumSegmentsUntilEruption() - 1) * TUNING.SEG_TIME + time_left_in_segment
-	local next_quake = ((self:GetNumSegmentsUntilQuake() - 1) * TUNING.SEG_TIME + time_left_in_segment) or 0 -- 下次地震时间
+	local SegUntilEruption = self:GetNumSegmentsUntilEruption() or 0
+	local seconds = math.floor((SegUntilEruption * 30) - TimeInSeg)
+	seconds = math.floor(seconds + 0.5)
 
+	local SegUntilQuake = self:GetNumSegmentsUntilQuake() or 0
+	local next_quake = math.floor((SegUntilQuake * 30) - TimeInSeg)
+	next_quake = math.floor(next_quake + 0.5)
 
 	time_string = string.format(
 		STRINGS.Compat_Insight.VOLCANOMANAGER.ANNOUNCE_COOLDOWN,
