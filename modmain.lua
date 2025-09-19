@@ -47,6 +47,16 @@ end
 
 modimport("language/"..lang..".lua")
 
+function Import(modulename)
+	local f = GLOBAL.kleiloadlua(modulename)
+	if f and type(f) == "function" then
+        GLOBAL.setfenv(f, env.env)
+        return f()
+	end
+end
+
+rawset(_G, "Insight_Plus_Upvaluehelper", Import(MODROOT .. "scripts/utils/bbgoat_upvaluehelper.lua"))
+
 local function AddDescriptors()
     if not _G.rawget(_G, "Insight") then return end
     -- 岛屿冒险 - 海难

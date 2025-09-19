@@ -8,7 +8,7 @@ local function Describe(self, context)
 	local description
 	local warning
 	local status_string
-	local Next_Aporkalypse_Time = Insight.env.util.getupvalue(self.OnUpdate, "_timeuntilaporkalypse")
+	local Next_Aporkalypse_Time = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_timeuntilaporkalypse")
 
 	if not Next_Aporkalypse_Time then return end
 
@@ -22,8 +22,8 @@ local function Describe(self, context)
 		)
 	else
 		warning = false
-		local next_bat_attack = Insight.env.util.getupvalue(self.OnUpdate, "_bat_time")
-		local next_herald_attack = Insight.env.util.getupvalue(self.OnUpdate, "_herald_time")
+		local next_bat_attack = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_bat_time")
+		local next_herald_attack = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_herald_time")
 
 		if not (next_bat_attack and next_herald_attack) then return end
 

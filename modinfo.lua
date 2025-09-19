@@ -34,7 +34,7 @@ Adds support for Island Adventures with countdown announcements for: Tiger Shark
 Also adds support for Above the Clouds with countdowns and announcements for: Vampire Bat, Fountain of Youth, Masked Pig, BFB, Aporkalypse, and bats/Ancient Herald during the Aporkalypse.
 ]])
 
-version = "1.4.6"
+version = "1.4.7"
 dst_compatible = true
 forge_compatible = false
 gorge_compatible = false

@@ -8,8 +8,8 @@ local function Describe(self, context)
 	local description
 	local warning
 	local bat_count = TheWorld.components.batted:GetNumBats()
-	local regen_in = Insight.env.util.getupvalue(self.LongUpdate, "_bat_regen_time")
-	local next_attack_in = Insight.env.util.getupvalue(self.LongUpdate, "_bat_attack_time")
+	local regen_in = Insight_Plus_Upvaluehelper.GetUpvalue(self.LongUpdate, "_bat_regen_time")
+	local next_attack_in = Insight_Plus_Upvaluehelper.GetUpvalue(self.LongUpdate, "_bat_attack_time")
 
 	if not (bat_count and regen_in and next_attack_in) then return end
 

@@ -8,13 +8,13 @@ local function Describe(self, context)
 	-- SW only
 	local description = nil
 	local time_string = nil
-	local _eruption = Insight.env.util.getupvalue(self.OnUpdate, "_eruption") -- 火山是否正在爆发
-	local _eruption_timer = Insight.env.util.getupvalue(self.OnUpdate, "_eruption_timer") -- 火山爆发计时器
-	local _firerain_duration = Insight.env.util.getupvalue(self.OnUpdate, "_firerain_duration") -- 火山爆发持续时间
+	local _eruption = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_eruption") -- 火山是否正在爆发
+	local _eruption_timer = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_eruption_timer") -- 火山爆发计时器
+	local _firerain_duration = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_firerain_duration") -- 火山爆发持续时间
 
-	local _minor_eruption = Insight.env.util.getupvalue(self.OnUpdate, "_minor_eruption") -- 火山是否正在小规模爆发(玩家使用火山魔杖召唤的爆发)
-	local _minor_firerains_data = Insight.env.util.getupvalue(self.OnUpdate, "_minor_firerains_data") -- 小规模喷发数据
-	-- local _minor_eruption_timer = Insight.env.util.getupvalue(self.OnUpdate, "_minor_eruption_timer") -- 火山小规模爆发计时器
+	local _minor_eruption = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_minor_eruption") -- 火山是否正在小规模爆发(玩家使用火山魔杖召唤的爆发)
+	local _minor_firerains_data = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_minor_firerains_data") -- 小规模喷发数据
+	-- local _minor_eruption_timer = Insight_Plus_Upvaluehelper.GetUpvalue(self.OnUpdate, "_minor_eruption_timer") -- 火山小规模爆发计时器
 
 	if not _eruption:value() and not _minor_eruption:value() then return end
 
